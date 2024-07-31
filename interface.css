@@ -1,0 +1,459 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #dd8c40;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 3;
+    padding: 3;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+header {
+    position: relative;
+    padding: 140px;
+    background-color: #fff;
+    background-image: url('header-background.jpeg'); /* Background image URL */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.intro .content {
+    max-width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: black;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: black;
+}
+
+.intro a {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 10px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.ourmission, .whychooseus, .contact-section, .aboutus {
+    padding: 40px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.faq-section {
+    padding: 50px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.ourmission h2, .whychooseus h2, .contact-section h2, .faq-section h2, .aboutus h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+}
+
+.whychooseus ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.whychooseus .columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.whychooseus ul {
+    list-style-type: none;
+    padding: 0;
+    width: 30%;
+}
+
+.whychooseus ul.left {
+    text-align: left;
+}
+
+.whychooseus ul.center {
+    text-align: center;
+}
+
+.whychooseus ul.right {
+    text-align: right;
+}
+
+/* event section */
+
+.event{
+    width: 100%;
+    height: 120vh;
+    background: url(event-background.jpg);
+    background-size: cover;
+}
+section .event_leftBox{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+}
+section .event_leftBox .content{
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    padding: 40px;
+    transition: .5s
+}
+section .event_leftBox .content:hover{
+    background: #dd8b40;
+}
+section .event_leftBox .content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+section .event_leftBox .content p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+section .events{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    float: right;
+    box-sizing: border-box;
+}
+section .events ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+section .events ul li{
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 200px;
+    margin: 15px 0;
+}
+section .events ul li .time{
+    position: relative;
+    padding: 20px;
+    background: #262626;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: .5s;
+}
+section .events ul li .time:hover{
+    background: #dd8b40;
+}
+section .events ul li .time h2{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 60px;
+    line-height: 30px;
+}
+section .events ul li .time h2 span{
+    font-size: 30px;
+}
+section .events ul li .details{
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+section .events ul li .details h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+section .events ul li .details p{
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+section .events ul li .details a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    border: 1.5px solid black;
+    margin-top: 8px;
+    font-size: 18px;
+    transition: .5s;
+}
+section .events ul li .details a:hover{
+    background: #dd8b40;
+    color: #fff;
+    border-color: #dd8b40;
+}
+
+
+.contact-section .contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#map {
+    width: 60%;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.contact-info {
+    width: 35%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* article section */
+.article h1{
+    font-size: 30px;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.article {
+    background-color: rgb(221, 212, 212);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    flex: 1 1 calc(25% - 20px); /* Four articles per row */
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.article:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.article img {
+    margin-bottom: 15px;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.article h3 {
+    margin: 15px 0 10px;
+}
+
+.article p {
+    margin: 0 0 15px;
+}
+
+.article a {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.article a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* faq section */
+.faq-h1{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+.accordion{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.accordion-item{
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header{
+    padding: 0.5rem  3rem 0.5rem 1rem;
+    font-size: large;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.accordion-item-header::after{
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+.accordion-item-header.active::after{
+    content: "\2212";
+}
+.accordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, transparent, #dd8b40, transparent) 1;
+}
+
+.accordion-item-header.active + .accordion-item-body{
+    max-height: 200px;
+}
+
+.aboutus .columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.aboutus .columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.aboutus .student {
+    width: 22%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+.aboutus .student h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.aboutus .student p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.aboutus .student:nth-child(1) {
+    text-align: left
+}
+
+.aboutus .student:nth-child(2),
+.aboutus .student:nth-child(3) {
+    text-align: center; 
+}
+
+.aboutus .student:nth-child(4) {
+    text-align: right; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .aboutus .columns {
+        flex-wrap: wrap;
+    }
+    
+    .aboutus .student {
+        width: 100%;
+    }
+}
