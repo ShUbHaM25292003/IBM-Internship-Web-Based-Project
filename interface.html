@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger</title>
+    <link rel="stylesheet" href="interface.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Zero Hunger</div>
+        <ul>
+            <li><a href="registeration.html">REGISTRATION</a></li>
+            <li><a href="#articles">ARTICLE</a></li>
+            <li><a href="#events">EVENTS</a></li>
+            <li><a href="#faqs">FAQ</a></li>
+            <li><a href="#about-us" onclick="smoothScroll(event)">ABOUT US</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="intro">
+            <div class="content">
+                <h1>Zero Hunger</h1>
+                <p>Come together to fight zero hunger and ensure that everyone has access to sufficient and nutritious food.</p>
+                <a href="registeration.html" class="btn">Get involved</a>
+            </div>
+        </div>
+    </header>
+    <section class="ourmission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to eradicate hunger from communities worldwide. We believe that every individual deserves access to nutritious and sufficient food, regardless of their circumstances. Through sustainable initiatives, community partnerships, and global advocacy, we strive to create a world where hunger is a thing of the past. Join us in our journey towards a future where no one goes to bed hungry.</p>
+    </section>
+    <section class="whychooseus">
+        <h2>Why Choose Us</h2>
+        <div class="columns">
+            <ul class="left">
+                <li>Proven track record of impactful initiatives</li>
+                <li>Strong community partnerships</li>
+                <li>Global advocacy for sustainable solutions</li>
+                <li>Commitment to transparency and accountability</li>
+            </ul>
+            <ul class="center">
+                <li>Empowering local communities</li>
+                <li>Innovative approaches to solving hunger</li>
+                <li>Experienced team of professionals</li>
+                <li>Collaborations with international organizations</li>
+            </ul>
+            <ul class="right">
+                <li>Focus on long-term solutions</li>
+                <li>Comprehensive food distribution programs</li>
+                <li>Educational campaigns on nutrition</li>
+                <li>Support for agricultural development</li>
+            </ul>
+        </div>
+    </section>
+    <section id="events" class="event">
+        <div class="event_leftBox">
+            <div class="content">
+                <h1>LATEST EVENTS</h1>
+                <p>Discover food donation events from around the world that you can participate in to support the mission of Zero Hunger. Join us in making a 
+                    difference and contributing to this vital cause. For more details about each event, click on the "View Detail" link.</p>
+            </div>
+        </div>
+        <div class="events">
+            <ul>
+                <li>
+                    <div class="time">
+                        <h2>1 <br><span>June</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>KIPP TEXAS</h3>
+                        <p>Kipp Texas, San Antonio Food Bank to host community food distribution event this Saturday</p>
+                        <a href="https://www.ksat.com/news/local/2024/05/30/kipp-texas-san-antonio-food-bank-to-host-community-food-distribution-event-this-saturday/">VIEW DETAILS</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+
+                <li>
+                    <div class="time">
+                        <h2>11<br><span>June</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>CANADA</h3>
+                        <p>Food donations welcome at 'Stuff a Bus' event</p>
+                        <a href="https://www.country1053.ca/2024/07/11/stuff-a-bus/#">VIEW DETAILS</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+
+                <li>
+                    <div class="time">
+                        <h2>17<br><span>July</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>VAN WERT, OHIO</h3>
+                        <p>OhioHealth Van Wert Hospital Teams up with United Way and West Ohio Food Bank to Hold Food Distribution Events</p>
+                        <a href="https://newsroom.ohiohealth.com/ohiohealth-van-wert-hospital-teams-up-with-united-way-and-west-ohio-food-bank-to-hold-food-distribution-events/">VIEW DETAILS</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+
+                <li>
+                    <div class="time">
+                        <h2>12<br><span>July</span></h2>
+                    </div>
+                    <div class="details">
+                        <h3>BAYTOWN</h3>
+                        <p>Food distribution events scheduled for Baytown</p>
+                        <a href="https://baytownsun.com/local/food-distribution-events-scheduled-for-baytown/article_ca8961c0-3fc2-11ef-8fbf-cf85bd7ee6cf.html">VIEW DETAILS</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+        </ul>
+        </div>
+    </section>
+    <section class="contact-section">
+        <h2>Where To Find Us</h2>
+        <div class="contact-content">
+            <div id="map"></div>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Vasantdada Patil Education Complex, Eastern Express Highway Near Everard Nagar, Chunabhatti, Sion, Mumbai, Maharashtra 400022</p>
+                <p><strong>Location Point:</strong> 19.0447° N, 72.8647° E</p>
+                <p><strong>Contact:</strong> 022 2084 7226</p>
+            </div>
+        </div>
+    </section>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            var map = L.map('map').setView([19.0447, 72.8647], 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([19.0447, 72.8647]).addTo(map)
+                .bindPopup('Vasantdada Patil Education Complex, Eastern Express Highway Near Everard Nagar, Chunabhatti, Sion, Mumbai, Maharashtra 400022')
+                .openPopup();
+        });
+    </script>
+    <section id="articles" class="article">
+    <h1 class="article-heading">LATEST ARTICLE</h1>
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="article">
+            <img src="article1.avif" alt="Article 1">
+            <p>Africa to overtake Asia with highest number of hungry people by 2030, UN says</p>
+            <a href="https://www.theguardian.com/global-development/article/2024/jul/24/africa-to-overtake-asia-with-highest-number-of-hungry-people-by-2030-says-un">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article2.jpg" alt="Article 2">
+            <p>The World's Hunger Problem is Barely Improving, UN says</p>
+            <a href="https://www.bloomberg.com/news/articles/2024-07-24/the-world-s-hunger-problem-is-barely-improving-un-says">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article3.png" alt="Article 3">
+            <p>WFP Global Operational Response Plan:Update #11-June 2024</p>
+            <a href="https://www.wfp.org/publications/wfp-global-operational-response-plan">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article4.jpg" alt="Article 4">
+            <p>Latest Hunger Data spotlights Extent of Famine risk in Gaza, Sudan and beyond</p>
+            <a href="https://news.un.org/en/story/2024/04/11489260">Read more</a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="article">
+            <img src="article5.webp" alt="Article 5">
+            <p>TOn Hunger Day, Industry Leaders Say Need To Address "Glaring Problem" Of Hunger</p>
+            <a href="https://www.ndtv.com/offbeat/world-hunger-day-2024-industry-leaders-say-need-to-address-glaring-problem-of-hunger-5762210">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article6.jpeg" alt="Article 6">
+            <p>The Global Food System No Longer Meets Our Health Needs.Here are Four Changes That Can Help Us To Eat</p>
+            <a href="https://www.weforum.org/agenda/2024/03/health-nutrition-global-report/">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article7.jpg" alt="Article 7">
+            <p>Climate Changes, Extreme Weather & Conflict Exacerbate Global Food Crisis</p>
+            <a href="https://news.mongabay.com/2024/02/climate-change-extreme-weather-conflict-exacerbate-global-food-crisis/">Read more</a>
+        </div>
+        <div class="article">
+            <img src="article8.webp" alt="Article 8">
+            <p>783 Million People Face Chronic Hunger. Yet the World Wastes 19% Of its Food, UN says.</p>
+            <a href="https://apnews.com/article/united-nations-food-waste-report-2024-18018b352ac6bd7be9925e15511254ac">Read more</a>
+        </div>
+    </div>
+    </section>
+
+    <section id="faqs">
+    <h1 class="faq-h1">FAQ</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                What is food insecurity ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Food insecurity refers to the lack of consistent access to enough food for an active, healthy life.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                How can I contribute to Zero Hunger ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    You can contribute by volunteering, donating, spreading awareness, or participating in our events and campaigns.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                What are the main causes of hunger ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    The main causes of hunger include poverty, conflict, climate change, inadequate infrastructure, and lack of access to education and resources.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                How does Zero Hunger support local farmers ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Zero Hunger supports local farmers by providing training, resources, and access to markets, promoting sustainable agricultural practices and improving food security.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                What are the benefits of donating to Zero Hunger ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Donating to Zero Hunger helps fund food distribution programs, supports community development projects, and contributes to long-term solutions for ending hunger.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                What role does advocacy play in Zero Hunger's mission ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Advocacy plays a crucial role in Zero Hunger's mission by raising awareness, influencing policies, and mobilizing support for initiatives that address hunger and promote food security globally.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                How can I get involved with Zero Hunger ?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    You can get involved with Zero Hunger by volunteering your time, donating funds or resources, participating in events and campaigns, and spreading awareness about the issue of hunger.
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="faq.js"></script>
+    <section id="about-us" class="aboutus">
+        <h2>About Us</h2>
+        <div class="columns">
+            <div class="student">
+                <h3>Siddhi Jambhavdekar</h3>
+                <p>Student of VPPCOE college, 20 years old, now conducting IBM Internship, extremely creative and has interests in UI/UX, Software designs, playing Rae in an underdeveloped game named "Stayin Awake".</p>
+            </div>
+            <div class="student">
+                <h3>Atharva Narvekar</h3>
+                <p>Student of VPPCOE college, 20 years old, now conducting IBM Internship, dedicated and has interests in AI/ML, DSA Algos, and is considered "Sigma".</p>
+            </div>
+            <div class="student">
+                <h3>Siddhesh Narkar</h3>
+                <p>Student of VPPCOE college, 20 years old, now conducting IBM Internship, influenced and inspired, Trading.</p>
+            </div>
+            <div class="student">
+                <h3>Shubham Kumbhar</h3>
+                <p>Student of VPPCOE college, 21 years old, now conducting IBM Internship, dedicated and has interests in Game Dev, AR/VR, playing Patrick in an underdeveloped game named "Stayin Awake" and is considered "Sigma".</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute('href').substr(1);
+            const targetElement = document.getElementById(targetId);
+            const offsetTop = targetElement.offsetTop;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
